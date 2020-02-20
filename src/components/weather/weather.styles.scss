@@ -1,0 +1,59 @@
+@import '../../assets/scss/breakpoints.scss';
+@import '../../assets/scss/variables.scss';
+
+
+.weather{
+    background:#000;
+    width:100%;
+    max-width:420px;
+    margin:  auto;
+    min-height:640px;
+    height:100vh;
+    position:relative;
+    &__background{
+        transition:1s;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:0;
+        height:100%;
+        width:100%;
+        background-size:cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        opacity:.5;
+    }
+    &__change{
+        position:absolute;
+        bottom:11px;
+        left:50%;
+        transform:translateX(-50%);
+        width:95%;
+        padding:11px;
+        max-width:420px;
+        border:none;
+        background:rgb(0,0,0);
+        border:1px solid white;
+        color:#fff;
+        cursor:pointer;
+        border-radius:3px;
+        font-size:1rem;
+        transition: .5s;
+        font-weight:700;
+        &:hover, &:active{
+            background:#ddd;
+            color:#333;
+        }
+    }
+    h4{
+        position: relative;
+        padding:.5rem 1rem;
+        color:#fff;
+    }
+}
+
+@include bp-tablet{
+    .weather{
+        height:100vh;
+    }
+}

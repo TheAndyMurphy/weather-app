@@ -1,0 +1,100 @@
+@import '../../assets/scss/variables.scss';
+
+.weather__current{
+    position: relative;
+    width:100%;
+    padding:1rem;
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__location{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:.5rem;
+        h3{
+            font-size:1.3rem;
+            line-height: 1.3rem;
+            margin-left: .5rem;
+            margin-bottom: 11px;
+            color:#fff;
+            svg{
+                width:1.3rem;
+                height:1.3rem;
+                fill: #fff;
+                margin-right: 11px;
+            }
+        }
+        p{
+            color:#fff;
+        }
+    }
+    &__main{
+        display: flex;
+        justify-content: center;
+        padding: 22px 11px;
+    }
+    &__icon{
+        img{
+            width:75px;
+            height:75px;
+        };
+    }
+    &__temp{
+        font-size: 4rem;
+        line-height:4rem;
+        font-weight:500;
+        color:#fff;
+        span{
+            font-size:2rem;
+            line-height:2rem;
+            vertical-align:top;
+        }
+    }
+    &__feel{
+        font-size: 1rem;
+        line-height:1rem;
+        font-weight:500;
+        color:#fff;
+        small{
+            font-size:1rem;
+            line-height:1rem;
+        }
+        span{
+            font-size:.8rem;
+            line-height:.8rem;
+            vertical-align:top;
+        }
+    }
+    &__description{
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        margin: 11px;
+        color:#fff;
+    }
+    &__data{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap:1rem;
+        margin: 1rem;
+        &__item{
+            font-size:.9rem;
+            padding: 11px;
+            width:300px;
+            border-radius:5px;
+            background-image:linear-gradient(45deg, rgba(0,0,0,.8) 50%, rgba(0,0,0,.4) 0%);
+            border:solid 1px #777;
+            color:#fff;
+        }
+    }
+
+}
+

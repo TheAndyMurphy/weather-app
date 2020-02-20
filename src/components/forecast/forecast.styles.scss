@@ -1,0 +1,37 @@
+.forecast{
+    padding: 11px;
+    display: grid;
+    grid-gap:11px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    &__item{
+        background:rgba(0,0,0, .5);
+        border-radius:5px;
+        color:#fff;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #777;
+        &__day{
+            font-size:.8rem;
+        }
+        &__time{
+            font-weight:700;
+            font-size:.9rem;
+        }
+        &__temp{
+            margin: .2rem;
+            font-size:1.5rem;
+            font-weight:700;
+            span{
+                font: size 0.6rem;
+                vertical-align: top;
+            }
+
+        }
+    }
+}
