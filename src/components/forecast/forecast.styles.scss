@@ -1,11 +1,14 @@
 .forecast{
-    padding: 11px;
-    display: grid;
-    grid-gap:11px;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
+    width:100%;
+    &__container{
+        width:100%;
+        display: grid;
+        grid-gap:11px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     &__item{
         background:rgba(0,0,0, .5);
         border-radius:5px;

@@ -12,7 +12,7 @@
 /build
 
 # keys
-/src/assets/keys
+.env
 
 # misc
 .DS_Store

@@ -5,11 +5,14 @@
 .weather{
     background:#000;
     width:100%;
-    max-width:420px;
+    padding:11px;
     margin:  auto;
-    min-height:640px;
-    height:100vh;
+    height:100%;
     position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     &__background{
         transition:1s;
         position: absolute;
@@ -24,13 +27,8 @@
         opacity:.5;
     }
     &__change{
-        position:absolute;
-        bottom:11px;
-        left:50%;
-        transform:translateX(-50%);
-        width:95%;
+        width:100%;
         padding:11px;
-        max-width:420px;
         border:none;
         background:rgb(0,0,0);
         border:1px solid white;

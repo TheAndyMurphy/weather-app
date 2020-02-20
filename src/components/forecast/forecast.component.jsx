@@ -3,6 +3,8 @@ import './forecast.styles.scss';
 
 const Forecast = ({forecastData}) => (
     <div className="forecast">
+        <h4>3 Hour Weather</h4>
+        <div className="forecast__container">
         {
             forecastData.cod === '200' ?
             forecastData.list.map(({dt, main, weather}, index) => {
@@ -31,16 +33,18 @@ const Forecast = ({forecastData}) => (
                   };
                 const time = new Date(dt * 1000).getHours();
                 return(
+                  
                     <div className="forecast__item" key={index}>
-                    <p className="forecast__item__day">{day}</p>
-                    <p className="forecast__item__time">{Math.round(Number(time))}.00</p>
-                    <p className="forecast__item__temp">{Math.round(main.temp)}<span>&#176;</span></p>
-                </div>
+                      <p className="forecast__item__day">{day}</p>
+                      <p className="forecast__item__time">{Math.round(Number(time))}.00</p>
+                      <p className="forecast__item__temp">{Math.round(main.temp)}<span>&#176;</span></p>
+                    </div>
                 )
             }).slice(0,4)
             :
             <p>You piece of shit</p>
         }
+      </div>
         
     </div>
 );
