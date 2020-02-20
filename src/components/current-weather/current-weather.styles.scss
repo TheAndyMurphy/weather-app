@@ -3,12 +3,11 @@
 .weather__current{
     position: relative;
     width:100%;
-    padding-top: 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,13 +79,14 @@
     }
     &__data{
         display: grid;
+        width:100%;
         grid-template-columns: 1fr;
         grid-gap:1rem;
-        margin: 1rem;
+        margin-top: 22px;
         &__item{
             font-size:.9rem;
             padding: 11px;
-            width:300px;
+            width:100%;
             border-radius:5px;
             background-image:linear-gradient(45deg, rgba(0,0,0,.8) 50%, rgba(0,0,0,.4) 0%);
             border:solid 1px #777;

@@ -1,6 +1,10 @@
 .forecast{
     position: relative;
     width:100%;
+    h4{
+        color:#fff;
+        margin-bottom: 11px;
+    }
     &__container{
         width:100%;
         display: grid;
