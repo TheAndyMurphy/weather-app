@@ -1,0 +1,29 @@
+.location{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:.5em;
+    position: relative;
+    h3{
+        font-size:1.5em;
+        line-height: 1em;
+        margin-bottom: .25em;
+        color:#fff;
+        font-weight:500;
+        letter-spacing:1px;
+        svg{
+            width:1em;
+            height:1em;
+            fill: #fff;
+            margin-right: 11px;
+            transform: translateY(2px)
+        }
+    }
+    p{
+        color:#ccc;
+        letter-spacing:1px;
+        font-size:1em;
+        font-weight:500;
+    }
+}

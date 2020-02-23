@@ -4,12 +4,13 @@ import { ReactComponent as LocationIcon } from '../../assets/custom-icons/locati
 
 const LocationModal = ({handleChange, handleSubmit, handleModal}) => (
     <div className="location__modal">
-        <span onClick={handleModal}>X</span>
+        
         <LocationIcon />
         <p>CHANGE LOCATION</p>
         <form className="location__modal__form" onSubmit={handleSubmit}>
             <input type="text" onChange={handleChange} placeholder="Enter New Location..." />
-            <input type="submit" value="submit" />
+            <input type="submit" value="update" />
+            <span onClick={handleModal}>X Cancel</span>
         </form>
     </div>
 

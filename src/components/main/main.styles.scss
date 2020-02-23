@@ -1,0 +1,51 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+    padding: 0.5em;
+    &__icon{
+        margin-bottom:1em;
+        -webkit-animation: movingWeather 4s ease  infinite;
+        animation: movingWeather 4s ease  infinite;
+        img{
+            width:125px;
+            height:125px;
+        }
+    }
+    &__temp{
+        font-size: 3em;
+        line-height:1em;
+        font-weight:500;
+        color:#fff;
+        letter-spacing:3px;
+        span{
+            font-size:.5em;
+            line-height:1em;
+            vertical-align:top;
+        }
+    }
+}
+
+@-webkit-keyframes movingWeather{
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+@keyframes movingWeather{
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}

@@ -1,8 +1,12 @@
 import React from 'react';
 import './weather.styles.scss';
-import CurrentWeather from '../current-weather/current-weather.component';
+import Main from '../main/main.component';
+import Location from '../location/location.component';
 import Forecast from '../forecast/forecast.component';
-import WeatherBackgrounds from './weather.backgrounds';
+import Description from '../description/description.component';
+import Details from '../details/details.component';
+
+import WeatherAssets from './weather.assets';
 import { ReactComponent as LocationIcon } from '../../assets/custom-icons/location.svg';
 
 const Weather = ({weatherData, handleModal,forecastData} ) => (
@@ -11,10 +15,13 @@ const Weather = ({weatherData, handleModal,forecastData} ) => (
             weatherData.cod === 200 ?
             <div className="weather">
                 <div className="weather__background" 
-                style={{backgroundImage: `url(${weatherData.weather.map(({icon}) => WeatherBackgrounds.find(x => x.id === icon).img)})` }}/>
+                style={{backgroundImage: `url(${weatherData.weather.map(({icon}) => WeatherAssets.find(x => x.id === icon).img)})` }}/>
                 {/* ${WeatherBackgrounds.filter(weather => weather.id = weatherData.weather[0].icon ? weather.img : 'none' )} */}
-                <CurrentWeather weatherData={weatherData} handleModal={handleModal} />
-                <Forecast forecastData={forecastData}/>
+                <Location weatherData={weatherData} />
+                <Main weatherData={weatherData} weatherAssets={WeatherAssets} />
+                <Description weatherData={weatherData} />
+                <Details weatherData={weatherData} />
+                <Forecast forecastData={forecastData} weatherAssets={WeatherAssets} />
                 <button className="weather__change" onClick={handleModal}>Change Location</button>
                 </div>
                 : <div className="weather__current">

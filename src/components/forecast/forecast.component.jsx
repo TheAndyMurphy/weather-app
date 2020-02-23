@@ -1,7 +1,7 @@
 import React from 'react';
 import './forecast.styles.scss';
 
-const Forecast = ({forecastData}) => (
+const Forecast = ({forecastData, weatherAssets}) => (
     <div className="forecast">
         <h4>3 Hour Weather</h4>
         <div className="forecast__container">
@@ -37,6 +37,7 @@ const Forecast = ({forecastData}) => (
                     <div className="forecast__item" key={index}>
                       <p className="forecast__item__day">{day}</p>
                       <p className="forecast__item__time">{Math.round(Number(time))}.00</p>
+                      <img className="forecast__img" src={weather.map(({icon}) => weatherAssets.find(x => x.id === icon).icon)} alt="icon" />
                       <p className="forecast__item__temp">{Math.round(main.temp)}<span>&#176;</span></p>
                     </div>
                 )

@@ -1,9 +1,19 @@
 .forecast{
     position: relative;
     width:100%;
+    padding: .5em;
+    margin-bottom: 5em;
     h4{
         color:#fff;
-        margin-bottom: 11px;
+        margin-bottom: .5em;
+    }
+    &__img{
+        width:2em;
+        height:2em;
+        margin:.5em 0;
+        img{
+            max-width:100%;
+        }
     }
     &__container{
         width:100%;
@@ -14,7 +24,8 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     &__item{
-        background:rgba(0,0,0, .5);
+        background:rgba(0,0,0,.3);
+        backdrop-filter:blur(10px);
         border-radius:5px;
         color:#fff;
         padding: 1rem 0.5rem;
@@ -24,21 +35,20 @@
         align-items: center;
         border: 1px solid #777;
         &__day{
-            font-size:.8rem;
+            font-size:.7em;
         }
         &__time{
-            font-weight:700;
-            font-size:.9rem;
+            font-weight:500;
+            font-size:.9em;
         }
         &__temp{
-            margin: .2rem;
-            font-size:1.5rem;
+            margin: .2em;
+            font-size:1em;
             font-weight:700;
             span{
                 font: size 0.6rem;
                 vertical-align: top;
             }
-
         }
     }
 }
