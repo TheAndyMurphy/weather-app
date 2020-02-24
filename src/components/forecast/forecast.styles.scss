@@ -1,11 +1,13 @@
 .forecast{
     position: relative;
     width:100%;
-    padding: .5em;
+    padding: 1em .5em;
     margin-bottom: 5em;
     h4{
         color:#fff;
-        margin-bottom: .5em;
+        margin-bottom: 1em;
+        font-weight:500;
+        letter-spacing: 1px;
     }
     &__img{
         width:2em;
@@ -33,18 +35,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #777;
+        border: 1px solid #444;
         &__day{
             font-size:.7em;
+            color:#ddd;
+            letter-spacing: 1px;
         }
         &__time{
             font-weight:500;
             font-size:.9em;
+            color:#ddd;
         }
         &__temp{
             margin: .2em;
             font-size:1em;
             font-weight:700;
+            letter-spacing: 1px;
             span{
                 font: size 0.6rem;
                 vertical-align: top;

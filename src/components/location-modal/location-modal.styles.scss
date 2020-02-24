@@ -1,5 +1,5 @@
 .location__modal{
-    background:rgba(0,0,0,.5);
+    background:rgba(0,0,0,.8);
     backdrop-filter:blur(10px);
     position:fixed;
     bottom:0;
@@ -14,6 +14,7 @@
     margin: 0 auto;
     height:100vh;
     padding: 0.5em;
+    animation: modalSlide 1s ease forwards;
     span{
         color:#fff;
         font-size:24px;
@@ -23,6 +24,7 @@
         margin:1em auto;
         cursor:pointer;
         border-bottom:1px solid #ccc;
+        letter-spacing: 1px;
     }
     svg{
         width:2em;
@@ -52,6 +54,7 @@
                 font-size:1em;
                 line-height:1em;
                 width:100%;
+                letter-spacing: 1px;
             }
             &[type=submit]{
                 padding: 1em;
@@ -62,7 +65,7 @@
                 color:#fff;
                 transition: .5s;
                 margin-bottom: 0;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
                 width: 100%;
                 cursor:pointer;
                 &:hover, &:active{
@@ -70,5 +73,16 @@
                 }
             }
         }
+    }
+}
+
+@keyframes modalSlide{
+    from{
+        //transform:translate(-50%, 100vh);
+        opacity:0;
+    }
+    to{
+        //transform:translate(-50%, 0);
+        opacity:1;
     }
 }

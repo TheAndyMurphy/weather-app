@@ -17,7 +17,7 @@ const Weather = ({weatherData, handleModal,forecastData} ) => (
                 <div className="weather__background" 
                 style={{backgroundImage: `url(${weatherData.weather.map(({icon}) => WeatherAssets.find(x => x.id === icon).img)})` }}/>
                 {/* ${WeatherBackgrounds.filter(weather => weather.id = weatherData.weather[0].icon ? weather.img : 'none' )} */}
-                <Location weatherData={weatherData} />
+                <Location weatherData={weatherData} handleModal={handleModal} />
                 <Main weatherData={weatherData} weatherAssets={WeatherAssets} />
                 <Description weatherData={weatherData} />
                 <Details weatherData={weatherData} />

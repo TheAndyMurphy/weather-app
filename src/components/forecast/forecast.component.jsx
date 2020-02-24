@@ -43,7 +43,7 @@ const Forecast = ({forecastData, weatherAssets}) => (
                 )
             }).slice(0,4)
             :
-            <p>You piece of shit</p>
+            <p>Inappropriate Response</p>
         }
       </div>
         
