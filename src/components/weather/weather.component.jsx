@@ -24,15 +24,16 @@ const Weather = ({weatherData, handleModal,forecastData} ) => (
                 <Forecast forecastData={forecastData} weatherAssets={WeatherAssets} />
                 <button className="weather__change" onClick={handleModal}>Change Location</button>
                 </div>
-                : <div className="weather__current">
-                    <p>Weather Location</p>
-                    <div className="weather__current__location">
-                        <LocationIcon /><h3>Invalid Location</h3>
+                : <div className="weather__error">
+                    <div className="weather__error__title">
+                        <LocationIcon />
+                        <h3>No Matching Results</h3>
+                        <p>Please Enter A Valid City</p>
                     </div>
-                    <div className="weather__current__icon">
-                        Please Enter A Valid City
-                    </div>
-                    <button className="weather__current__change" onClick={handleModal}>CHANGE LOCATION</button>
+                    <p className="weather__error__subtitle">
+                        E.g (Dublin, IE)
+                    </p>
+                    <button className="weather__change" onClick={handleModal}>CHANGE LOCATION</button>
             </div>
         }
     </div>
