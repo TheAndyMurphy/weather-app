@@ -60,7 +60,6 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            height:100vh;
             padding: 0.5em;
             animation: modalSlide 1s ease forwards;
             &__title{
@@ -86,11 +85,5 @@
                 margin-top: 1.5em;
                 margin-bottom: 1em;
             }
-    }
-}
-
-@include bp-tablet{
-    .weather{
-        height:100vh;
     }
 }
